@@ -12,7 +12,7 @@ public:
 			return name;
 		}
 
-		vitrual double cost() const
+		virtual double cost() const
 		{
 			return price;
 		}
@@ -25,7 +25,20 @@ private:
 
 class Extras : public Coffee {
 public:
+	Extras(std::shared_ptr<Coffee> coffee) : Coffee("", 0.0), coffee{ coffee } {}
+
+		std::string get_name() const override
+		{
+			return coffee->get_name();
+		}
+
+		double cost() const override
+		{
+			return coffee->cost();
+		}
+	
 private:
+	std::shared_ptr<Coffee> coffee;
 };
 
 class Milk : public Extras {

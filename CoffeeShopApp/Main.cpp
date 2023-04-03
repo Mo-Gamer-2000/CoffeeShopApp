@@ -43,22 +43,62 @@ private:
 
 class Milk : public Extras {
 public:
-private:
+	Milk(std::shared_ptr<Coffee> coffee) : Extras(coffee) {}
+
+	std::string get_name() const override
+	{
+		return Extras::get_name() + ", Milk";
+	}
+
+	double cost() const override
+	{
+		return Extras::cost() + 0.50;
+	}
 };
 
 class Sugar : public Extras {
 public:
-private:
+	Sugar(std::shared_ptr<Coffee> coffee) : Extras(coffee) {}
+
+	std::string get_name() const override
+	{
+		return Extras::get_name() + ", Sugar";
+	}
+
+	double cost() const override
+	{
+		return Extras::cost() + 0.25;
+	}
 };
 
 class WhippedCream : public Extras {
 public:
-private:
+	WhippedCream(std::shared_ptr<Coffee> coffee) : Extras(coffee) {}
+
+	std::string get_name() const override
+	{
+		return Extras::get_name() + ", WhippedCream";
+	}
+
+	double cost() const override
+	{
+		return Extras::cost() + 0.75;
+	}
 };
 
 class Cinnamon : public Extras {
 public:
-private:
+	Cinnamon(std::shared_ptr<Coffee> coffee) : Extras(coffee) {}
+
+	std::string get_name() const override
+	{
+		return Extras::get_name() + ", Cinnamon";
+	}
+
+	double cost() const override
+	{
+		return Extras::cost() + 0.35;
+	}
 };
 
 int main() {

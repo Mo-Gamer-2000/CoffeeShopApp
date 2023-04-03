@@ -5,7 +5,22 @@
 
 class Coffee {
 public:
+	Coffee(std::string name, double price) : name{ name }, price{ price } {}
+
+		virtual std::string get_name() const 
+		{
+			return name;
+		}
+
+		vitrual double cost() const
+		{
+			return price;
+		}
+
 private:
+	std::string name;
+	double price;
+	
 };
 
 class Extras : public Coffee {

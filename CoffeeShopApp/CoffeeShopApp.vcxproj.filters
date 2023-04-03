@@ -18,5 +18,43 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Coffee.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Extras.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Milk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sugar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WhippedCream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cinnamon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Coffee.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Milk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sugar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WhippedCream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cinnamon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -159,5 +159,40 @@ int main() {
 		std::cout << "invalid choice!" << std::endl;
 		return 1;
 	}
+
+	std::shared_ptr<Coffee> coffee = std::make_shared<Coffee>(coffee_type, base_price);
+
+	char addCondiments;
+
+	std::cout << "Would you like to add Milk for an additional $0.50? (y/n): ";
+	std::cin >> addCondiments;
+
+	if (addCondiments == 'y' || addCondiments == 'Y')
+		coffee = std::make_shared<Milk>(coffee);
+
+	std::cout << "Would you like to add Sugar for an additional $0.25? (y/n): ";
+	std::cin >> addCondiments;
+
+	if (addCondiments == 'y' || addCondiments == 'Y')
+		coffee = std::make_shared<Sugar>(coffee);
+
+	std::cout << "Would you like to add Whipped Cream for an additional $0.75? (y/n): ";
+	std::cin >> addCondiments;
+
+	if (addCondiments == 'y' || addCondiments == 'Y')
+		coffee = std::make_shared<WhippedCream>(coffee);
+
+	std::cout << "Would you like to add Cinnamon for an additional $0.35? (y/n): ";
+	std::cin >> addCondiments;
+
+	if (addCondiments == 'y' || addCondiments == 'Y')
+		coffee = std::make_shared<Cinnamon>(coffee);
+
+	std::cout << "Order details:" << std::endl;
+	std::cout << "Order: " << coffee->get_name() << std::endl;
+	std::cout << "Total cost: $" << coffee->cost() << std::endl;
+
+	std::cout << "Enjoy your coffee!" << std::endl;
+
 	return 0;
 }
